@@ -1,6 +1,6 @@
 import { DashedLine } from "../dashed-line";
 
-import { cn } from "@/lib/utils";
+import { cn, withBase } from "@/lib/utils";
 
 const topItems = [
   {
@@ -9,7 +9,7 @@ const topItems = [
       "Draft lightning-fast documents with our Smart Instructions and Templates.",
     images: [
       {
-        src: "/resource-allocation/templates.webp",
+        src: withBase("/resource-allocation/templates.webp"),
         alt: "Issue template interface",
         width: 495,
         height: 186,
@@ -23,34 +23,34 @@ const topItems = [
     title: "Simplify your stack.",
     description: "No more Confluence, SharePoint, or Microsoft Word.",
     images: [
-      { src: "/logos/jira.svg", alt: "Jira logo", width: 48, height: 48 },
-      { src: "/logos/excel.svg", alt: "Excel logo", width: 48, height: 48 },
+      { src: withBase("/logos/jira.svg"), alt: "Jira logo", width: 48, height: 48 },
+      { src: withBase("/logos/excel.svg"), alt: "Excel logo", width: 48, height: 48 },
       {
-        src: "/logos/notion.svg",
+        src: withBase("/logos/notion.svg"),
         alt: "Notion logo",
         width: 48,
         height: 48,
       },
-      { src: "/logos/word.svg", alt: "Word logo", width: 48, height: 48 },
+      { src: withBase("/logos/word.svg"), alt: "Word logo", width: 48, height: 48 },
       {
-        src: "/logos/monday.svg",
+        src: withBase("/logos/monday.svg"),
         alt: "Monday logo",
         width: 48,
         height: 48,
       },
       {
-        src: "/logos/drive.svg",
+        src: withBase("/logos/drive.svg"),
         alt: "Google Drive logo",
         width: 48,
         height: 48,
       },
       {
-        src: "/logos/jira.svg",
+        src: withBase("/logos/jira.svg"),
         alt: "Jira logo",
         width: 48,
         height: 48,
       },
-      { src: "/logos/asana.svg", alt: "Asana logo", width: 48, height: 48 },
+      { src: withBase("/logos/asana.svg"), alt: "Asana logo", width: 48, height: 48 },
     ],
     className:
       "flex-1 [&>.title-container]:mb-5 md:[&>.title-container]:mb-8 md:[&>.title-container]:translate-x-2 xl:[&>.title-container]:translate-x-4 [&>.title-container]:translate-x-0",
@@ -65,7 +65,7 @@ const bottomItems = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do.",
     images: [
       {
-        src: "/resource-allocation/graveyard.webp",
+        src: withBase("/resource-allocation/graveyard.webp"),
         alt: "Graveyard interface",
         width: 305,
         height: 280,
@@ -81,7 +81,7 @@ const bottomItems = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.",
     images: [
       {
-        src: "/resource-allocation/discussions.webp",
+        src: withBase("/resource-allocation/discussions.webp"),
         alt: "Task discussions interface",
         width: 320,
         height: 103,
@@ -97,7 +97,7 @@ const bottomItems = [
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.",
     images: [
       {
-        src: "/resource-allocation/notifications.webp",
+        src: withBase("/resource-allocation/notifications.webp"),
         alt: "Notifications interface",
         width: 305,
         height: 280,

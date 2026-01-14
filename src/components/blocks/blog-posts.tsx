@@ -1,6 +1,7 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
+import { withBase } from "@/lib/utils";
 
 const BlogPosts = ({ posts }: { posts: any[] }) => {
   return (
@@ -24,11 +25,11 @@ const BlogPosts = ({ posts }: { posts: any[] }) => {
               <a
                 key={post.id}
                 className="rounded-xl border"
-                href={`/blog/${post.id}/`}
+                href={withBase(`/blog/${post.id}/`)}
               >
                 <div className="p-2">
                   <img
-                    src={post.data.image}
+                    src={withBase(post.data.image)}
                     alt="placeholder"
                     className="aspect-video w-full rounded-lg object-cover"
                   />
@@ -43,7 +44,7 @@ const BlogPosts = ({ posts }: { posts: any[] }) => {
                     <div className="flex items-center gap-3">
                       <Avatar className="ring-input size-7 rounded-full ring-1">
                         <AvatarImage
-                          src={post.data.authorImage}
+                          src={withBase(post.data.authorImage)}
                           alt="placeholder"
                         />
                         <AvatarFallback>CN</AvatarFallback>

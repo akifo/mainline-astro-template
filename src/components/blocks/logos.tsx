@@ -1,6 +1,6 @@
 import Marquee from "react-fast-marquee";
 
-import { cn } from "@/lib/utils";
+import { cn, withBase } from "@/lib/utils";
 
 type Company = {
   name: string;
@@ -14,28 +14,28 @@ export const Logos = () => {
   const topRowCompanies = [
     {
       name: "Mercury",
-      logo: "/logos/mercury.svg",
+      logo: withBase("/logos/mercury.svg"),
       width: 143,
       height: 26,
       href: "https://mercury.com",
     },
     {
       name: "Watershed",
-      logo: "/logos/watershed.svg",
+      logo: withBase("/logos/watershed.svg"),
       width: 154,
       height: 31,
       href: "https://watershed.com",
     },
     {
       name: "Retool",
-      logo: "/logos/retool.svg",
+      logo: withBase("/logos/retool.svg"),
       width: 113,
       height: 22,
       href: "https://retool.com",
     },
     {
       name: "Descript",
-      logo: "/logos/descript.svg",
+      logo: withBase("/logos/descript.svg"),
       width: 112,
       height: 27,
       href: "https://descript.com",
@@ -45,35 +45,35 @@ export const Logos = () => {
   const bottomRowCompanies = [
     {
       name: "Perplexity",
-      logo: "/logos/perplexity.svg",
+      logo: withBase("/logos/perplexity.svg"),
       width: 141,
       height: 32,
       href: "https://perplexity.com",
     },
     {
       name: "Monzo",
-      logo: "/logos/monzo.svg",
+      logo: withBase("/logos/monzo.svg"),
       width: 104,
       height: 18,
       href: "https://monzo.com",
     },
     {
       name: "Ramp",
-      logo: "/logos/ramp.svg",
+      logo: withBase("/logos/ramp.svg"),
       width: 105,
       height: 28,
       href: "https://ramp.com",
     },
     {
       name: "Raycast",
-      logo: "/logos/raycast.svg",
+      logo: withBase("/logos/raycast.svg"),
       width: 128,
       height: 33,
       href: "https://raycast.com",
     },
     {
       name: "Arc",
-      logo: "/logos/arc.svg",
+      logo: withBase("/logos/arc.svg"),
       width: 90,
       height: 28,
       href: "https://arc.com",

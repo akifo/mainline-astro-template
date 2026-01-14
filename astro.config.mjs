@@ -8,7 +8,7 @@ import { defineConfig } from "astro/config";
 // https://astro.build/config
 export default defineConfig({
   site: "https://akifo.github.io",
-  base: "/mainline-astro-template",
+  base: "mainline-astro-template",
   integrations: [mdx(), sitemap(), react()],
   output: "static",
 

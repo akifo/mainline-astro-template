@@ -1,6 +1,7 @@
 import { format } from "date-fns";
 
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { withBase } from "@/lib/utils";
 const BlogPost = ({
   post,
   children,
@@ -18,7 +19,7 @@ const BlogPost = ({
           <h3 className="text-muted-foreground max-w-4xl">{description}</h3>
           <div className="flex items-center gap-3 text-sm md:text-base">
             <Avatar className="h-8 w-8 border">
-              <AvatarImage src={authorImage} />
+              <AvatarImage src={withBase(authorImage)} />
               <AvatarFallback>{authorName.charAt(0)}</AvatarFallback>
             </Avatar>
             <span>
@@ -29,7 +30,7 @@ const BlogPost = ({
             </span>
           </div>
           <img
-            src={image}
+            src={withBase(image)}
             alt="placeholder"
             className="mt-0 mb-8 aspect-video w-full rounded-lg border object-cover"
           />

@@ -5,6 +5,13 @@ import { Background } from "@/components/background";
 import { Button } from "@/components/ui/button";
 import BasicLayout from "@/layouts/BasicLayout.astro";
 import DefaultLayout from "@/layouts/DefaultLayout.astro";
+
+const base = import.meta.env.BASE_URL;
+const withBase = (path: string) => {
+  const cleanBase = base.endsWith("/") ? base.slice(0, -1) : base;
+  const cleanPath = path.startsWith("/") ? path : `/${path}`;
+  return `${cleanBase}${cleanPath}`;
+};
 ---
 
 <DefaultLayout title="404: Not Found" description="Sorry, the page you're looking for doesn't exist.">
@@ -21,13 +28,13 @@ import DefaultLayout from "@/layouts/DefaultLayout.astro";
         </p>
 
         <div class="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-          <a href="/">
+          <a href={withBase("/")}>
           <Button size="lg" className="group min-w-[200px] gap-2">
               <ArrowLeft className="size-5 transition-transform group-hover:-translate-x-1" />
               Back to Home
             </Button>
           </a>
-          <a href="/contact">
+          <a href={withBase("/contact")}>
             <Button
             variant="outline"
             size="lg"
@@ -40,4 +47,4 @@ import DefaultLayout from "@/layouts/DefaultLayout.astro";
       </div>
     </div>
   </Background>
-</DefaultLayout> 
+</DefaultLayout>

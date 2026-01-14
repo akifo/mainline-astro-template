@@ -6,6 +6,7 @@ import { Button } from "../ui/button";
 import { Card, CardContent, CardHeader } from "../ui/card";
 import { Checkbox } from "../ui/checkbox";
 import { Input } from "../ui/input";
+import { withBase } from "@/lib/utils";
 
 const LoginSection = () => {
   return (
@@ -15,7 +16,7 @@ const LoginSection = () => {
           <Card className="mx-auto w-full max-w-sm">
             <CardHeader className="flex flex-col items-center space-y-0">
               <img
-                src="/logo.svg"
+                src={withBase("/logo.svg")}
                 alt="logo"
                 width={94}
                 height={18}
@@ -63,7 +64,7 @@ const LoginSection = () => {
               </div>
               <div className="text-muted-foreground mx-auto mt-8 flex justify-center gap-1 text-sm">
                 <p>Don&apos;t have an account?</p>
-                <a href="/signup" className="text-primary font-medium">
+                <a href={withBase("/signup")} className="text-primary font-medium">
                   Sign up
                 </a>
               </div>

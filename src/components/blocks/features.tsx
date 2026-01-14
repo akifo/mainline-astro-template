@@ -3,19 +3,20 @@ import { ChevronRight } from "lucide-react";
 import { DashedLine } from "../dashed-line";
 
 import { Card, CardContent } from "@/components/ui/card";
+import { withBase } from "@/lib/utils";
 
 const items = [
   {
     title: "Purpose-built for product development",
-    image: "/features/triage-card.svg",
+    image: withBase("/features/triage-card.svg"),
   },
   {
     title: "Manage projects end-to-end",
-    image: "/features/cycle-card.svg",
+    image: withBase("/features/cycle-card.svg"),
   },
   {
     title: "Build momentum and healthy habits",
-    image: "/features/overview-card.svg",
+    image: withBase("/features/overview-card.svg"),
   },
 ];
 

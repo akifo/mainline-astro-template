@@ -11,7 +11,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { cn } from "@/lib/utils";
+import { cn, withBase } from "@/lib/utils";
 
 const items = [
   {
@@ -19,56 +19,56 @@ const items = [
     author: "Amy Chase",
     role: "PM",
     company: "Mercury Finance",
-    image: "/testimonials/amy-chase.webp",
+    image: withBase("/testimonials/amy-chase.webp"),
   },
   {
     quote: "I was able to replace 80% of my team with Mainline bots.",
     author: "Jonas Kotara",
     role: "Lead Engineer",
     company: "Mercury Finance",
-    image: "/testimonials/jonas-kotara.webp",
+    image: withBase("/testimonials/jonas-kotara.webp"),
   },
   {
     quote: "Founder Mode is hard enough without having a really nice PM app.",
     author: "Kevin Yam",
     role: "Founder",
     company: "Mercury Finance",
-    image: "/testimonials/kevin-yam.webp",
+    image: withBase("/testimonials/kevin-yam.webp"),
   },
   {
     quote: "I can use the tool as a substitute from my PM.",
     author: "Kundo Marta",
     role: "Founder",
     company: "Mercury Finance",
-    image: "/testimonials/kundo-marta.webp",
+    image: withBase("/testimonials/kundo-marta.webp"),
   },
   {
     quote: "We're misusing Mainline as a CRM and it still works!",
     author: "Amy Chase",
     role: "PM",
     company: "Mercury Finance",
-    image: "/testimonials/amy-chase.webp",
+    image: withBase("/testimonials/amy-chase.webp"),
   },
   {
     quote: "I was able to replace 80% of my team with Mainline bots.",
     author: "Jonas Kotara",
     role: "Lead Engineer",
     company: "Mercury Finance",
-    image: "/testimonials/jonas-kotara.webp",
+    image: withBase("/testimonials/jonas-kotara.webp"),
   },
   {
     quote: "Founder Mode is hard enough without having a really nice PM app.",
     author: "Kevin Yam",
     role: "Founder",
     company: "Mercury Finance",
-    image: "/testimonials/kevin-yam.webp",
+    image: withBase("/testimonials/kevin-yam.webp"),
   },
   {
     quote: "I can use the tool as a substitute from my PM.",
     author: "Kundo Marta",
     role: "Founder",
     company: "Mercury Finance",
-    image: "/testimonials/kundo-marta.webp",
+    image: withBase("/testimonials/kundo-marta.webp"),
   },
 ];
 

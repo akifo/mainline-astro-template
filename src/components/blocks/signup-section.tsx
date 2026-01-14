@@ -5,6 +5,7 @@ import { FcGoogle } from "react-icons/fc";
 import { Button } from "../ui/button";
 import { Card, CardContent, CardHeader } from "../ui/card";
 import { Input } from "../ui/input";
+import { withBase } from "@/lib/utils";
 
 const SignupSection = () => {
   return (
@@ -14,7 +15,7 @@ const SignupSection = () => {
           <Card className="mx-auto w-full max-w-sm">
             <CardHeader className="flex flex-col items-center space-y-0">
               <img
-                src="/logo.svg"
+                src={withBase("/logo.svg")}
                 alt="logo"
                 width={94}
                 height={18}
@@ -49,7 +50,7 @@ const SignupSection = () => {
               </div>
               <div className="text-muted-foreground mx-auto mt-8 flex justify-center gap-1 text-sm">
                 <p>Already have an account?</p>
-                <a href="/login" className="text-primary font-medium">
+                <a href={withBase("/login")} className="text-primary font-medium">
                   Log in
                 </a>
               </div>

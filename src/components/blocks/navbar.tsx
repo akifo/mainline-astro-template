@@ -13,7 +13,7 @@ import {
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { GITHUB_URL } from "@/consts";
-import { cn } from "@/lib/utils";
+import { cn, withBase } from "@/lib/utils";
 
 const ITEMS = [
   {
@@ -22,21 +22,21 @@ const ITEMS = [
     dropdownItems: [
       {
         title: "Modern product teams",
-        href: "/#feature-modern-teams",
+        href: withBase("/#feature-modern-teams"),
         description:
           "Mainline is built on the habits that make the best product teams successful",
       },
       {
         title: "Resource Allocation",
-        href: "/#resource-allocation",
+        href: withBase("/#resource-allocation"),
         description: "Mainline your resource allocation and execution",
       },
     ],
   },
-  { label: "About Us", href: "/about" },
-  { label: "Pricing", href: "/pricing" },
-  { label: "FAQ", href: "/faq" },
-  { label: "Contact", href: "/contact" },
+  { label: "About Us", href: withBase("/about") },
+  { label: "Pricing", href: withBase("/pricing") },
+  { label: "FAQ", href: withBase("/faq") },
+  { label: "Contact", href: withBase("/contact") },
 ];
 
 export const Navbar = () => {
@@ -56,9 +56,9 @@ export const Navbar = () => {
       )}
     >
       <div className="flex items-center justify-between px-6 py-3">
-        <a href="/" className="flex shrink-0 items-center gap-2">
+        <a href={withBase("/")} className="flex shrink-0 items-center gap-2">
           <img
-            src="/logo.svg"
+            src={withBase("/logo.svg")}
             alt="logo"
             width={94}
             height={18}
@@ -117,7 +117,7 @@ export const Navbar = () => {
         {/* Auth Buttons */}
         <div className="flex items-center gap-2.5">
           <ThemeToggle />
-          <a href="/login" className="max-lg:hidden">
+          <a href={withBase("/login")} className="max-lg:hidden">
             <Button variant="outline">
               <span className="relative z-10">Login</span>
             </Button>

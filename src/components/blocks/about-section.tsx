@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+import { cn, withBase } from "@/lib/utils";
 
 export const AboutSection = () => {
   return (
@@ -8,8 +8,8 @@ export const AboutSection = () => {
       <div className="flex flex-col gap-8 lg:gap-16 xl:gap-20">
         <ImageSection
           images={[
-            { src: "/about/1.webp", alt: "Team collaboration" },
-            { src: "/about/2.webp", alt: "Team workspace" },
+            { src: withBase("/about/1.webp"), alt: "Team collaboration" },
+            { src: withBase("/about/2.webp"), alt: "Team workspace" },
           ]}
           className="xl:-translate-x-10"
         />
@@ -22,7 +22,7 @@ export const AboutSection = () => {
             "If you're interested in building the future of PM, check out our open roles below.",
           ]}
           ctaButton={{
-            href: "/careers",
+            href: withBase("/careers"),
             text: "View open roles",
           }}
         />
@@ -38,8 +38,8 @@ export const AboutSection = () => {
         />
         <ImageSection
           images={[
-            { src: "/about/3.webp", alt: "Modern workspace" },
-            { src: "/about/4.webp", alt: "Team collaboration" },
+            { src: withBase("/about/3.webp"), alt: "Modern workspace" },
+            { src: withBase("/about/4.webp"), alt: "Team collaboration" },
           ]}
           className="hidden lg:flex xl:translate-x-10"
         />

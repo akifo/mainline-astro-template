@@ -2,14 +2,15 @@ import { ArrowUpRight } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { GITHUB_URL } from "@/consts";
+import { withBase } from "@/lib/utils";
 
 export function Footer() {
   const navigation = [
-    { name: "Product", href: "/#feature-modern-teams" },
-    { name: "About Us", href: "/about" },
-    { name: "Pricing", href: "/pricing" },
-    { name: "FAQ", href: "/faq" },
-    { name: "Contact", href: "/contact" },
+    { name: "Product", href: withBase("/#feature-modern-teams") },
+    { name: "About Us", href: withBase("/about") },
+    { name: "Pricing", href: withBase("/pricing") },
+    { name: "FAQ", href: withBase("/faq") },
+    { name: "Contact", href: withBase("/contact") },
   ];
 
   const social = [
@@ -17,7 +18,7 @@ export function Footer() {
     { name: "LinkedIn", href: "#" },
   ];
 
-  const legal = [{ name: "Privacy Policy", href: "/privacy" }];
+  const legal = [{ name: "Privacy Policy", href: withBase("/privacy") }];
 
   return (
     <footer className="flex flex-col items-center gap-14 pt-28 lg:pt-32">
